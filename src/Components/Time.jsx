@@ -8,6 +8,14 @@ export default class Time extends Component {
             Time: new Date().toLocaleTimeString()
         }
     }
+
+    componentDidMount() {
+        setInterval(() => {
+            this.setState({
+                Time: new Date().toLocaleTimeString()
+            })
+        })
+    }
     render() {
         return (
             <div>{this.state.Time}</div>
